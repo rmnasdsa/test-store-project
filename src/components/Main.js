@@ -1,6 +1,7 @@
 
-export default Main = () => {
+const Main = () => {
   return (
   <></>
 )
 }
+export default Main;
