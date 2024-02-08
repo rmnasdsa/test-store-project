@@ -31,3 +31,6 @@ a{
   background-repeat: no-repeat;
 
 }
+.products{
+  display: flex;
+}
