@@ -8,9 +8,10 @@ const Main = () => {
           {products.map(({ name, cost ,id, img}) => {     
             return (
                 <div className='product' key={id}>
-                  <img src={img} style={{width: '200px'}}></img>
+                  <img src={img} style={{width: '200px',height:'200px'}}></img>
                   <p>{ name}</p>
-                  <h4>{ cost}</h4>
+                  <h4>{cost}</h4>
+                  <button className='btns'>select</button>
                 </div>
             )
           })}

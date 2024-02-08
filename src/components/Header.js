@@ -6,10 +6,10 @@ const Header = () => {
       <div className="header">
         <div className="navbar">
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="about">About</a></li>
-            <li><a href="products">Products</a></li>
-            <li><a href="contact">Contact</a></li>
+            <li className="list-item"><a href="/">Home</a></li>
+            <li className="list-item"><a href="about">About</a></li>
+            <li className="list-item"><a href="products">Products</a></li>
+            <li className="list-item"><a href="contact">Contact</a></li>
           </ul>
         </div>
         <div className="shopping-cart" style={{ color: "pink"}}>shopping cart</div>

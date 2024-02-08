@@ -15,6 +15,7 @@ code {
 }
 .header{
   background-color: rgb(88, 55, 22);
+  display: flex;
 }
 li{
   list-style-type: none;
@@ -33,4 +34,25 @@ a{
 }
 .products{
   display: flex;
+}
+.navbar{ 
+  display: flex;
+  flex: 80%;
+}
+.navbar ul{
+  display: flex;
+}
+.list-item{
+  margin: 15px;
+}
+.shopping-cart{
+  flex: 5%;
+  margin-top: 20px;
+}
+.btns{
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: brown;
+  color: aliceblue;
 }
