@@ -2,15 +2,18 @@
 const FetchData = () => {
 
   const reject = () => console.log('error occured...');
-  const resolve = async() => {
-    const data = await fetch('../../data.json');
-    const res = data.json();
-    console.log(res);
+  const resolve = () => {
+    const data = fetch('../../data.json').then((res) => {
+      res.json();
+      // console.log(res);
+    }).then((jsonData) => console.log(jsonData))
+    // console.log(data);
+ 
   }
   const promise = new Promise((resolve) => {resolve()});
   promise.then(() => {
-    // setTimeout(resolve(), 1000);
-    resolve()
+    setTimeout(resolve(), 1000);
+    // resolve()
   }).catch (() => {
     reject()
   })
