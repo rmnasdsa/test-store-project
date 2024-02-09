@@ -3,7 +3,7 @@ export const products = [
     id : 1,
     name : "duffel bag",
     cost: "23 $",
-    img:'../../public/duffel-bag.jpg'
+    img:'https://www.realsimple.com/thmb/DqB551QclspC--UIqZn3ws4b_d4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Best-Selling-Travel-Duffel-Bag-tout-243367e457f444469e43749fdbefcaa2.jpg'
   },
   {
     id :2,
