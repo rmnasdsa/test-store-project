@@ -1,3 +1,5 @@
+import { FaCartPlus } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -6,13 +8,16 @@ const Header = () => {
       <div className="header">
         <div className="navbar">
           <ul>
-            <li className="list-item"><a href="/">Home</a></li>
-            <li className="list-item"><a href="about">About</a></li>
-            <li className="list-item"><a href="products">Products</a></li>
-            <li className="list-item"><a href="contact">Contact</a></li>
+            <li className="list-item"><Link to='/'>Home</Link></li>
+            <li className="list-item"><Link to='/about'>About</Link></li>
+            <li className="list-item"><Link to='/products'>Products</Link></li>
+            <li className="list-item"><Link to='/contact'>Contact</Link></li>
           </ul>
         </div>
-        <div className="shopping-cart" style={{ color: "pink"}}>shopping cart</div>
+        <div className="shopping-cart" style={{ color: "pink" }}>
+          <Link to='/shoppingCart' target="_blank">shopping cart <FaCartPlus /></Link>
+         
+        </div>
       </div>
       <div className="header-img"></div>
     </>
