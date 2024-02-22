@@ -1,10 +1,9 @@
 import { useState, useEffect, createContext,useContext } from 'react';
 import { products } from './Data';
 import ShoppingCart from './ShoppingCart';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { getInfo } from '../App';
-
-
+import Shop from './Shop';
 
 
 // let { setCount } = useContext(getInfo);
@@ -17,6 +16,11 @@ import { getInfo } from '../App';
 const Main = () => {
   // let { setName_1, setName_2, setName_3, setName_4, setName_5, setImg_1, setImg_2, setImg_3, setImg_4, setImg_5, setCost_1, setCost_2, setCost_3, setCost_4, setCost_5 } = useContext(getInfo);
   let [show, setShow] = useState("ab");
+  // let [productName, setProductName] = useState([]);
+  // let [productImg, setProductImg] = useState([]);
+  // let [productCost, setProductCost] = useState([]);
+  const navigate = useNavigate('./contact', { state: { productName: "", productImg: "", productCost: "" } });
+  // let [image, setImage] = useState("https://www.briggs-riley.com/cdn/shop/articles/02_5.jpg?v=1608575147");
   
   // setCount = useContext(getInfo);
   
@@ -79,6 +83,14 @@ const Main = () => {
 
   
   // <ShoppingCart setName_1={setName_1} setImg_1={ setImg_1} setCost_1={setCost_1} name_1={name_1} img_1={img_1} cost_1={cost_1} handleClick={handleClick} />
+  
+  
+  // let [image, setImage] = useState("");
+  const handleClick = (img, name, cost, id) => {
+    // setImage(img);
+    navigate(`./contact/${id}`, { state: { productName: name, productImg: img, productCost: cost, productId:id } });
+   
+  }
 
   return (
     <>
@@ -92,11 +104,12 @@ const Main = () => {
                   <img src={img} style={{width: '200px',height:'200px'}}></img>
                   <p>{ name}</p>
                   <h4>{cost}$</h4>
-                  {/* <button className='btns' onClick={() => handleClick(id,name,img,cost)}>select</button> */}
+                  <button className='btns' onClick={() => handleClick(img,name,cost,id)}>select</button>
                 </div>
             )
           })}
         </div>
+      
         {/* {(num % 2 !== 0) ? <p>success</p> : <p>not found</p>} */}
         {/* {bool && name (<p>{name}</p> )} */}
 

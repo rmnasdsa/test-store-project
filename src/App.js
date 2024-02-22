@@ -3,7 +3,8 @@ import Header from './components/Header';
 import Main from './components/Main';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ShoppingCart from "./components/ShoppingCart";
-import { createContext,useState } from 'react';
+import { createContext, useState } from 'react';
+import Shop from './components/Shop';
 // import { test,setTest } from './components/Main';
 
 
@@ -33,6 +34,12 @@ function App() {
               {/* <Route path='/shoppingCart' element={ <Main />} /> */}
             <Route path='/shoppingCart' element={<>
               <ShoppingCart />
+            </>} />
+            <Route path='/contact/*' element={<>
+              <Shop id={ 1} />
+              <Shop id={ 2} />
+              <Shop id={ 3} />
+              <Shop id={ 4} />
             </>} />
             </Routes>
         </Router> 

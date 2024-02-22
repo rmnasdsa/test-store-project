@@ -34,8 +34,8 @@ const ShoppingCart = () => {
 
 
   let [show, setShow] = useState("ab")
-  let { test, count } = useContext(getInfo);
-  test = 'test';
+  // let { test, count } = useContext(getInfo);
+  // test = 'test';
   let [count_product_1, setCount_product_1] = useState(1);
   let [count_product_2, setCount_product_2] = useState(1);
   let [count_product_3, setCount_product_3] = useState(1);
